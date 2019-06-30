@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Przekierowanie do Steam</title>
+  <!-- Autor: Peter Olson Strona: https://github.com/peterolson/BigInteger.js -->
+  <script src="js/bigint.js"></script>
+  <!-- Autor: 12pt Strona:https://github.com/12pt/steamid-converter/ -->
+  <script src="js/steamid.js"></script>
+  <!-- Mały skrypt by Mateusz (https://strefa51.tk) oraz Jewson -->
+
+ </head>
+ <body>
+
+  <script>
+   var url = window.location.href;
+   var url = new URL(url);
+   var steamid = url.searchParams.get("steamid");
+   var steamurl = SteamIDConverter.profileURL(steamid);
+   location.href = steamurl;
+  </script>
+
+ </body>
+</html>
